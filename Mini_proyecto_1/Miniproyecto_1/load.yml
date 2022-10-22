@@ -1,0 +1,11 @@
+config:
+  environments:
+    local:
+      target: "http://192.168.100.2/"
+      phases:
+        - duration: 12 #segundos.
+          arrivalRate: 20 #Usuarios virtuales cada segundo hasta 12 segundos.
+          maxVusers: 50 #Cantidad maxima de usuarios virtuales recurrentes.
+scenarios:
+  - flow:
+    - log: "Current environment is set to: {{ $environment }}"
